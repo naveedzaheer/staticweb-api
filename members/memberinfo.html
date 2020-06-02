@@ -19,7 +19,7 @@
       const response = await fetch("/.auth/me");
       const payload = await response.json();
       const { clientPrincipal } = payload;
-      let { text } = await(payload).json();
+      let { text } = await response.json();
       document.querySelector('#name').textContent = text;
     }())
   </script>
