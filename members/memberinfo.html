@@ -11,7 +11,7 @@
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
-    <p>Loading message from the API: <b id="name">...</b></p>
+    <p>Loading message from the Auth - API - 1: <b id="name">...</b></p>
   </main>
 
   <script>
@@ -19,7 +19,7 @@
       const response = await fetch("/.auth/me");
       const payload = await response.json();
       const { clientPrincipal } = payload;
-      document.querySelector('#name').textContent = text;
+      document.querySelector('#name').textContent = payload;
     }())
   </script>
 </body>
