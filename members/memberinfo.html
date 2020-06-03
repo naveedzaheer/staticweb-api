@@ -12,7 +12,7 @@
   <main>
     <a href="/.auth/login/aad">Login</a>
     <h1>Vanilla JavaScript App</h1>
-    <p>Loading message from the Auth - API - 7: <b id="name">...</b></p>
+    <p>Loading message from the Auth - API - 8: <b id="name">...</b></p>
   </main>
 
   <script>
@@ -20,9 +20,9 @@
       const response = await fetch("/.auth/me");
       const payload = await response.json();
       const { clientPrincipal } = payload;
-      //let { text } = clientPrincipal.userDetails;
+      let { text } = clientPrincipal.userDetails;
       console.log(payload);
-      //document.querySelector('#name').textContent = text;
+      document.querySelector('#name').textContent = text;
     }())
   </script>
 </body>
